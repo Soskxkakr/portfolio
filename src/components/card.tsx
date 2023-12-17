@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Tooltip } from "@nextui-org/react";
 
-const Card = () => {
+const Card = ({ project }: any) => {
   return (
     <motion.div
       initial={"hidden"}
@@ -11,32 +12,39 @@ const Card = () => {
         visible: { opacity: 1 },
         hidden: { opacity: 0 },
       }}
-      className="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
+      className="flex flex-col max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
     >
-      <a href="hello">
+      <a href={project.ghLink} target="_blank">
         <Image
-          className="rounded-t-lg w-full"
-          src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
-          alt=""
-          width={50}
-          height={50}
+          className="w-full"
+          src={project.image}
+          alt={project.name}
+          width={400}
+          height={400}
         />
       </a>
-      <div className="p-5">
-        <a href="helo">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
+      <div className="flex flex-col p-5 h-full">
+        <a href={project.ghLink} target="_blank">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-blue-500 dark:text-white">
+            {project.name}
           </h5>
         </a>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
+        <p className="font-normal text-gray-700 dark:text-gray-400">
+          {project.description}
         </p>
+        <div className="flex flex-wrap space-x-4 mb-2">
+          {project.tools.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((tool: any, idx: number) => (
+            <Tooltip key={idx} content={tool.name} className="bg-gray-500 text-white p-2 rounded-lg">
+              <Image className="rounded-lg mt-4" src={tool.link} alt={tool.name} width={28} height={28} />
+            </Tooltip>
+          ))}
+        </div>
         <a
-          href="hello"
-          className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300"
+          href={project.ghLink}
+          target="_blank"
+          className="inline-flex items-center mt-auto place-self-start py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300"
         >
-          Read more
+          Source code
           <svg
             className="ml-2 -mr-1 w-4 h-4"
             fill="currentColor"

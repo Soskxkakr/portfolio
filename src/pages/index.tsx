@@ -4,8 +4,10 @@ import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/themeProvider";
 import Main from "@/views/home";
 import About from "@/views/about";
-import Services from "@/views/services";
+// import Services from "@/views/services";
 import Projects from "@/views/projects";
+import Experiences from "@/views/experiences";
+import Contact from "@/views/contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +25,10 @@ export default function Home() {
           <Navbar />
           <Main />
           <About />
-          <Services />
+          <Experiences />
+          {/* <Services /> */}
           <Projects />
+          <Contact />
         </main>
       </ThemeProvider>
     </>

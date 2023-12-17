@@ -10,7 +10,7 @@ export const ThemeContext = createContext<ThemeContext>({
     dispatch: undefined
 });
 
-const initialState = { darkMode: true };
+const initialState = { darkMode: false };
 
 const themeReducer: (
     state: { darkMode: boolean }, 

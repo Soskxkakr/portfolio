@@ -19,7 +19,7 @@ const Main = () => {
                 backgroundSize: "cover",
               }
             : {
-                backgroundImage: `url('/cloudDark.png'`,
+                backgroundImage: `url('/cloudDark.png')`,
                 backgroundSize: "cover",
               }
         }
@@ -67,18 +67,19 @@ const Main = () => {
                   className="mr-5 cursor-pointer mt-8 hover:scale-125"
                 >
                   <Image alt={el.name} src={el.url} width={50} height={50} />
-                  {/* <p className="text-md mt-2 hover:hidden">{el.name}</p> */}
                 </a>
               ))}
             </div>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="mt-3 sm:mt-0 cursor-pointer w-1/2">
-                <Link
-                  to=""
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
                 >
                   Resume
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -15,9 +15,13 @@ const links = [
     route: "about",
   },
   {
-    name: "Services",
-    route: "services",
+    name: "Experiences",
+    route: "experiences",
   },
+  // {
+  //   name: "Services",
+  //   route: "services",
+  // },
   {
     name: "Projects",
     route: "projects",
