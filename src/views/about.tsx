@@ -84,7 +84,7 @@ const About = () => {
               I craft user-centric, high-performance applications across devices.
             </p>
           </motion.div>
-          <motion.div className="flex flex-wrap mt-8 flex flex-wrap justify-center ">
+          <motion.div className="flex flex-wrap mt-8 justify-center">
             {techStack
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((el, index) => (
@@ -102,7 +102,7 @@ const About = () => {
                     },
                     hidden: { opacity: 1, y: 80 },
                   }}
-                  className="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                  className="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer w-20 md:w-48 lg:w-40 sm:mx-1"
                 >
                   <Image
                     alt={el.name}
@@ -111,7 +111,7 @@ const About = () => {
                     width={50}
                     height={50}
                   />
-                  <h4 className="text-md ml-4">{el.name}</h4>
+                  <h4 className="text-md ml-4 hidden md:block">{el.name}</h4>
                 </motion.div>
               ))}
           </motion.div>
