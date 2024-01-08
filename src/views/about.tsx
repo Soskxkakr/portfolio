@@ -107,11 +107,11 @@ const About = () => {
                   <Image
                     alt={el.name}
                     src={el.link}
-                    className="w-12"
+                    className="w-10"
                     width={50}
                     height={50}
                   />
-                  <h4 className="text-md ml-4 hidden md:block">{el.name}</h4>
+                  <h4 className="text-sm ml-4 hidden md:block">{el.name}</h4>
                 </motion.div>
               ))}
           </motion.div>
