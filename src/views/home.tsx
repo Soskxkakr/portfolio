@@ -3,7 +3,6 @@ import { TypeAnimation } from "react-type-animation";
 import { contactLinks } from "../constants/constants";
 import { ThemeContext } from "../contexts/themeProvider";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
 import Image from "next/image";
 
 const Main = () => {
@@ -59,7 +58,7 @@ const Main = () => {
               I am a Front-End / Full-Stack Developer. I am currently working at
               WebLITE as a Software Engineer
             </p>
-            <div className="flex md:justify-start ">
+            <div className="flex md:justify-start sm:justify-center">
               {contactLinks.map((el) => (
                 <a
                   key={el.name}

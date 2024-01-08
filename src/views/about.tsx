@@ -23,7 +23,7 @@ const About = () => {
             <h4 className="mt-12 text-3xl font-semibold text-blue-500">
               A bit about me
             </h4>
-            <div className="flex flex-wrap md:flex-row sm:flex-col md:space-x-8 sm:space-x-0">
+            <div className="flex flex-wrap md:flex-row sm:flex-col sm:items-center md:space-x-8 sm:space-x-0">
               <a
                 href="/resume.pdf"
                 target="_blank"
@@ -32,7 +32,7 @@ const About = () => {
                 <Image
                   alt={"Reinaldo Taslim"}
                   src={"/me.jpg"}
-                  className="rounded-xl mt-4 hover:grayscale-0 lg:grayscale md:grayscale-0 sm:grayscale-0 sm:self-center"
+                  className="rounded-xl mt-4 hover:grayscale-0 lg:grayscale md:grayscale-0 sm:grayscale-0 md:self-center sm:self-center"
                   width={300}
                   height={150}
                 />
