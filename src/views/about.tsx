@@ -37,7 +37,7 @@ const About = () => {
                   height={150}
                 />
               </a>
-              <div className="mt-4 flex-1 w-full">
+              <div className="mt-4 flex-1 w-full self-baseline">
                 <p
                   className={
                     "text-xl text-justify " +

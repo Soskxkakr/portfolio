@@ -167,6 +167,10 @@ export const techStack = [
     name: "Swift",
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg",
   },
+  {
+    name: "SignalR",
+    link: "https://www.cloud-config.jp/wp-content/uploads//icon-signalR.svg"
+  },
 ];
 
 export const contactLinks = [
@@ -304,6 +308,10 @@ export const experienceData = [
       {
         name: "Grunt",
         link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grunt/grunt-original.svg",
+      },
+      {
+        name: "SignalR",
+        link: "https://www.cloud-config.jp/wp-content/uploads//icon-signalR.svg"
       },
     ],
   },
