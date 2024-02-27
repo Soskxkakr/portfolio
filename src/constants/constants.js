@@ -9,7 +9,7 @@ export const techStack = [
   },
   {
     name: "AWS",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
   },
   {
     name: "C# Language",
@@ -141,7 +141,7 @@ export const techStack = [
   },
   {
     name: "Laravel",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+    link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/laravel/laravel-original.svg",
   },
   {
     name: "Linux",
@@ -294,8 +294,8 @@ export const experienceData = [
         link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
       },
       {
-        name: "MySQl",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg",
+        name: "MySQL",
+        link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mysql/mysql-original.svg",
       },
       {
         name: "Azure",
