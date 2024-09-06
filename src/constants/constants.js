@@ -1,18 +1,18 @@
 export const techStack = [
   {
     name: "Github",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
   {
     name: "Jenkins",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
   },
   {
     name: "AWS",
     link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
   },
   {
-    name: "C# Language",
+    name: "C#",
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
   },
   {
@@ -169,7 +169,11 @@ export const techStack = [
   },
   {
     name: "SignalR",
-    link: "https://www.cloud-config.jp/wp-content/uploads//icon-signalR.svg"
+    link: "https://www.cloud-config.jp/wp-content/uploads//icon-signalR.svg",
+  },
+  {
+    name: "Socket.IO",
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
   },
 ];
 
@@ -187,7 +191,7 @@ export const contactLinks = [
   {
     name: "LinkedIn",
     url: "https://img.icons8.com/doodle/40/000000/linkedin--v2.png",
-    link: "https://www.linkedin.com/in/reinaldo-taslim-365b93136/",
+    link: "https://www.linkedin.com/in/reinaldo-taslim/",
   },
 ];
 
@@ -229,17 +233,18 @@ export const experienceData = [
       "Provided proper documentations and Jira tickets for other developers to understand more of the system.",
       "Implemented CI/CD using Azure pipelines and Github actions.",
       "Implemented a dynamic SEO integrated with CMS and GA4.",
+      "Integrated real-time messaging functionality using third-party web protocols and APIs into SaaS product, enhancing user communication and engagement.",
     ],
     image: "/teneoTech.jpg",
     link: "https://www.weblite.com.my/",
     tools: [
       {
         name: "Github",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
       },
       {
         name: "Jenkins",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
       },
       {
         name: "Selenium",
@@ -254,7 +259,7 @@ export const experienceData = [
         link: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
       },
       {
-        name: "C# Language",
+        name: "C#",
         link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
       },
       {
@@ -311,7 +316,11 @@ export const experienceData = [
       },
       {
         name: "SignalR",
-        link: "https://www.cloud-config.jp/wp-content/uploads//icon-signalR.svg"
+        link: "https://www.cloud-config.jp/wp-content/uploads//icon-signalR.svg",
+      },
+      {
+        name: "Socket.IO",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
       },
     ],
   },
@@ -335,11 +344,11 @@ export const experienceData = [
       },
       {
         name: "Github",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
       },
       {
         name: "Jenkins",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
       },
       {
         name: "HTML",
@@ -446,7 +455,7 @@ export const experienceData = [
       },
       {
         name: "Github",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
       },
       {
         name: "Postman",
@@ -508,7 +517,7 @@ export const projectsData = [
         name: "Bootstrap",
         link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
       },
-    ]
+    ],
   },
   {
     name: "SpaceFood",
@@ -518,7 +527,7 @@ export const projectsData = [
     image: "/spaceFood.jpg",
     tools: [
       {
-        name: "C# Language",
+        name: "C#",
         link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
       },
       {
@@ -537,6 +546,6 @@ export const projectsData = [
         name: "Bootstrap",
         link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
       },
-    ]
+    ],
   },
 ];
