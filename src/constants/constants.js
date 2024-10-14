@@ -193,6 +193,11 @@ export const contactLinks = [
     url: "https://img.icons8.com/doodle/40/000000/linkedin--v2.png",
     link: "https://www.linkedin.com/in/reinaldo-taslim/",
   },
+  {
+    name: "WhatsApp",
+    url: "https://img.icons8.com/doodle/40/000000/whatsapp--v1.png",
+    link: "https://api.whatsapp.com/send?phone=+60172420407",
+  },
 ];
 
 export const serviceData = [
