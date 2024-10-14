@@ -30,8 +30,8 @@ const Contact = () => {
       id="contact"
       className={
         darkMode
-          ? "bg-gray-100 pt-24"
-          : "bg-black pt-24 text-white"
+          ? "bg-gray-100 pt-36"
+          : "bg-black text-white pt-36"
       }
     >
       <div className="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 ">
