@@ -1,12 +1,15 @@
-import React, { useContext } from "react";
-import { techStack } from "../constants/constants";
-import { ThemeContext } from "../contexts/themeProvider";
+import React, { useContext, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
+import { pictureData, techStack } from "../constants/constants";
+import { ThemeContext } from "../contexts/themeProvider";
 
 const About = () => {
   const theme = useContext(ThemeContext);
+  const [emblaRef] = useEmblaCarousel({ loop: true });
   const darkMode = theme.state.darkMode;
+
   return (
     <div id="about" className={darkMode ? "bg-white" : "bg-gray-900"}>
       <div className="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 md:mt-0 pt-24 pb-12">
@@ -24,19 +27,21 @@ const About = () => {
               A bit about me
             </h4>
             <div className="flex flex-wrap md:flex-row sm:flex-col sm:items-center md:space-x-8 sm:space-x-0">
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  alt={"Reinaldo Taslim"}
-                  src={"/me.jpg"}
-                  className="rounded-xl mt-4 hover:grayscale-0 lg:grayscale md:grayscale-0 sm:grayscale-0 md:self-center sm:self-center"
-                  width={300}
-                  height={150}
-                />
-              </a>
+              <div className="embla" ref={emblaRef}>
+                <div className="embla__container">
+                  {pictureData.map((data, idx) => (
+                    <div className="embla__slide" key={idx}>
+                      <Image
+                        alt={data.alt}
+                        src={data.path}
+                        className="rounded-xl mt-4 hover:grayscale-0 lg-filter lg:grayscale-[75%] md:grayscale-[75%] sm:grayscale-[75%] md:self-center sm:self-center"
+                        width={300}
+                        height={150}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
               <div className="mt-4 flex-1 w-full self-baseline">
                 <p
                   className={
@@ -80,8 +85,9 @@ const About = () => {
                 (darkMode ? "text-gray-500" : "text-white")
               }
             >
-              Leveraging cutting-edge frameworks and dependable open-source libraries,
-              I craft user-centric, high-performance applications across devices.
+              Leveraging cutting-edge frameworks and dependable open-source
+              libraries, I craft user-centric, high-performance applications
+              across devices.
             </p>
           </motion.div>
           <motion.div className="flex flex-wrap mt-8 justify-center">

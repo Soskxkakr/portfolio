@@ -1,3 +1,14 @@
+export const pictureData = [
+  {
+    alt: "Reinaldo Taslim",
+    path: "/me.jpg",
+  },
+  {
+    alt: "Reinaldo Taslim",
+    path: "/me2.jpg",
+  },
+];
+
 export const techStack = [
   {
     name: "Github",
