@@ -7,32 +7,37 @@ const Contact = () => {
   const [emailTemplate, setEmailTemplate] = useState({
     name: "",
     subject: "",
-    message: ""
-  })
+    message: "",
+  });
 
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
-  const handleEmailTemplate = (e: React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => {
+  const handleEmailTemplate = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setEmailTemplate(template => ({...template, [name]: value}))
-  }
+    setEmailTemplate((template) => ({ ...template, [name]: value }));
+  };
 
   const handleSubmitForm = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const body = emailTemplate.message.replaceAll("\n", "%0D%0A");
-    const defaultFooter = emailTemplate.name ? "%0D%0A%0D%0ASincere%0D%0A" + emailTemplate.name : "";
-    window.location.href = "mailto:aldo.taslim@gmail.com?subject=" + emailTemplate.subject + "&body=" + body + defaultFooter;
-  }
+    const defaultFooter = emailTemplate.name
+      ? "%0D%0A%0D%0ASincere%0D%0A" + emailTemplate.name
+      : "";
+    window.location.href =
+      "mailto:aldo.taslim@gmail.com?subject=" +
+      emailTemplate.subject +
+      "&body=" +
+      body +
+      defaultFooter;
+  };
 
   return (
     <div
       id="contact"
-      className={
-        darkMode
-          ? "bg-gray-100 pt-36"
-          : "bg-black text-white pt-36"
-      }
+      className={darkMode ? "bg-gray-100 pt-36" : "bg-black text-white pt-36"}
     >
       <div className="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 ">
         <h2 className="text-5xl font-bold px-4 md:px-0 text-center z-0">
@@ -42,10 +47,15 @@ const Contact = () => {
           <h4 className="mt-12 text-3xl font-semibold text-blue-500">
             Connect with me
           </h4>
-          <p className={"mt-4 text-xl " + (darkMode ? "text-gray-500" : "text-white")}>
+          <p
+            className={
+              "mt-4 text-xl " + (darkMode ? "text-gray-500" : "text-white")
+            }
+          >
             If you want to know more about me or my work, or if you would just
             <br />
-            like to say hello, send me a message. I&apos;d love to hear from you.
+            like to say hello, send me a message. I&apos;d love to hear from
+            you.
           </p>
         </div>
         <div className="flex justify-between items-center md:items-stretch  flex-col md:flex-row pb-2">
@@ -120,7 +130,10 @@ const Contact = () => {
                     Send me email directly
                   </a>
                 </div>
-                <button className="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400" onClick={(e) => handleSubmitForm(e)}>
+                <button
+                  className="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400"
+                  onClick={(e) => handleSubmitForm(e)}
+                >
                   Submit
                 </button>
               </div>
@@ -128,21 +141,15 @@ const Contact = () => {
           </div>
           <div className="w-full flex flex-col md:items-end  mt-12 md:mt-6">
             <h1 className="text-3xl font-bold">Phone</h1>
-            <a
-              className="mb-12 mt-4 font-semibold text-blue-700 block uppercase"
-            >
-              +60-172420407
+            <a className="mb-12 mt-4 font-semibold text-blue-700 block uppercase">
+              +60 17-242 0407
             </a>
             <h1 className="text-3xl font-bold">Email</h1>
-            <a
-              className="mb-12 mt-4 font-semibold text-blue-700 block uppercase"
-            >
+            <a className="mb-12 mt-4 font-semibold text-blue-700 block uppercase">
               aldo.taslim@gmail.com
             </a>
             <h1 className="text-3xl  font-bold">Address</h1>
-            <a
-              className="mt-4  mb-12 md:text-right font-semibold text-blue-700 block uppercase"
-            >
+            <a className="mt-4  mb-12 md:text-right font-semibold text-blue-700 block uppercase">
               Petaling Jaya, Selangor
               <br />
               Kuala Lumpur, Malaysia

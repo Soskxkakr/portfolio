@@ -250,6 +250,7 @@ export const experienceData = [
       "Implemented CI/CD using Azure pipelines and Github actions.",
       "Implemented a dynamic SEO integrated with CMS and GA4.",
       "Integrated real-time messaging functionality using third-party web protocols and APIs into SaaS product, enhancing user communication and engagement.",
+      "Applied security patches in compliance with OWASP standards to ensure product security and protect user data.",
     ],
     image: "/teneoTech.jpg",
     link: "https://www.weblite.com.my/",
