@@ -251,6 +251,7 @@ export const experienceData = [
       "Implemented a dynamic SEO integrated with CMS and GA4.",
       "Integrated real-time messaging functionality using third-party web protocols and APIs into SaaS product, enhancing user communication and engagement.",
       "Applied security patches in compliance with OWASP standards to ensure product security and protect user data.",
+      "Integrated a new feature into existing product that uses AI models to achieve the desired goals.",
     ],
     image: "/teneoTech.jpg",
     link: "https://www.weblite.com.my/",
