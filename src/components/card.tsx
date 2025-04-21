@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Tooltip } from "@nextui-org/react";
+import { ThemeContext } from "@/contexts/themeProvider";
 
 const Card = ({ project }: any) => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <motion.div
       initial={"hidden"}
@@ -12,7 +16,9 @@ const Card = ({ project }: any) => {
         visible: { opacity: 1 },
         hidden: { opacity: 0 },
       }}
-      className="flex flex-col max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
+      className={`flex flex-col max-w-xl rounded-lg border shadow-lg my-8 ${
+        darkMode ? "bg-white border-gray-200" : "bg-gray-800 border-gray-700"
+      }`}
     >
       <a href={project.ghLink} target="_blank">
         <Image
@@ -25,7 +31,11 @@ const Card = ({ project }: any) => {
       </a>
       <div className="flex flex-col p-5 h-full">
         <a href={project.ghLink} target="_blank">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-blue-500 dark:text-white">
+          <h5
+            className={`mb-2 text-2xl font-bold tracking-tight hover:text-blue-500 ${
+              darkMode ? "text-gray-900" : "text-white"
+            }`}
+          >
             {project.name}
           </h5>
         </a>
@@ -33,11 +43,23 @@ const Card = ({ project }: any) => {
           {project.description}
         </p>
         <div className="flex flex-wrap space-x-4 mb-2">
-          {project.tools.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((tool: any, idx: number) => (
-            <Tooltip key={idx} content={tool.name} className="bg-gray-500 text-white p-2 rounded-lg">
-              <Image className="rounded-lg mt-4" src={tool.link} alt={tool.name} width={28} height={28} />
-            </Tooltip>
-          ))}
+          {project.tools
+            .sort((a: any, b: any) => a.name.localeCompare(b.name))
+            .map((tool: any, idx: number) => (
+              <Tooltip
+                key={idx}
+                content={tool.name}
+                className="bg-gray-500 text-white p-2 rounded-lg"
+              >
+                <Image
+                  className="rounded-lg mt-4"
+                  src={tool.link}
+                  alt={tool.name}
+                  width={28}
+                  height={28}
+                />
+              </Tooltip>
+            ))}
         </div>
         <a
           href={project.ghLink}

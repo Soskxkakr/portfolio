@@ -77,14 +77,18 @@ const Contact = () => {
                   name="name"
                   value={emailTemplate.name}
                   onChange={(e) => handleEmailTemplate(e)}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className={`border text-sm rounded-lg block w-full p-2.5 ${
+                    darkMode
+                      ? "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
+                      : "bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  }`}
                   placeholder="Enter your name"
                   required
                 />
               </div>
               <div className="mb-4">
                 <label
-                  htmlFor="email"
+                  htmlFor="subject"
                   className={
                     darkMode
                       ? "block mb-2 text-lg font-medium text-gray-900"
@@ -98,7 +102,11 @@ const Contact = () => {
                   name="subject"
                   value={emailTemplate.subject}
                   onChange={(e) => handleEmailTemplate(e)}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className={`border text-sm rounded-lg block w-full p-2.5 ${
+                    darkMode
+                      ? "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
+                      : "bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  }`}
                   placeholder="Enter your subject"
                   required
                 />
@@ -119,7 +127,11 @@ const Contact = () => {
                   name="message"
                   value={emailTemplate.message}
                   onChange={(e) => handleEmailTemplate(e)}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className={`border text-sm rounded-lg block w-full p-2.5 ${
+                    darkMode
+                      ? "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
+                      : "bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  }`}
                   placeholder="Enter your message"
                   required
                 />
