@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/themeProvider";
 import Main from "@/views/home";
@@ -62,6 +63,7 @@ export default function Home() {
           <Contact />
         </main>
         <SpeedInsights />
+        <Analytics />
       </ThemeProvider>
     </>
   );
