@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/themeProvider";
 import Main from "@/views/home";
@@ -22,15 +23,33 @@ export default function Home() {
         <link rel="shortcut icon" type="image/png" href="/favicon.png" />
 
         <title>Reinaldo Taslim | Software Engineer</title>
-        
-        <meta name="description" content="Reinaldo Taslim | Software Engineer" />
-        <meta name="keywords" content="Soskxkakr, Reinaldo, Reinaldo Taslim, Software Engineer, Software Developer" />
+
+        <meta
+          name="description"
+          content="Reinaldo Taslim | Software Engineer"
+        />
+        <meta
+          name="keywords"
+          content="Soskxkakr, Reinaldo, Reinaldo Taslim, Software Engineer, Software Developer"
+        />
 
         <meta key="og:type" property="og:type" content="website" />
         <meta key="og:title" property="og:title" content="Reinaldo Taslim" />
-        <meta key="og:description" property="og:description" content="Reinaldo Taslim | Software Enginner" />
-        <meta key="og:url" property="og:url" content="https://soskxkakr.vercel.app" />
-        <meta key="og:image" property="og:image" content="https://soskxkakr.vercel.app/_next/image?url=%2Fme.jpg&w=384&q=75" />
+        <meta
+          key="og:description"
+          property="og:description"
+          content="Reinaldo Taslim | Software Enginner"
+        />
+        <meta
+          key="og:url"
+          property="og:url"
+          content="https://soskxkakr.vercel.app"
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content="https://soskxkakr.vercel.app/_next/image?url=%2Fme.jpg&w=384&q=75"
+        />
       </Head>
       <ThemeProvider>
         <main className={`${inter.className}`}>
@@ -42,6 +61,7 @@ export default function Home() {
           <Projects />
           <Contact />
         </main>
+        <SpeedInsights />
       </ThemeProvider>
     </>
   );
