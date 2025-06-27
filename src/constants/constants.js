@@ -252,6 +252,7 @@ export const experienceData = [
       "Integrated real-time messaging functionality using third-party web protocols and APIs into SaaS product, enhancing user communication and engagement.",
       "Applied security patches in compliance with OWASP standards to ensure product security and protect user data.",
       "Integrated a new feature into existing product that uses AI models to achieve the desired goals.",
+      "Engineered a messaging integration platform to support automated communication flows across multiple client environments, with a focus on scalability, reliability, and third-party API interoperability.",
     ],
     image: "/teneoTech.jpg",
     link: "https://www.weblite.com.my/",
