@@ -341,6 +341,10 @@ export const experienceData = [
         name: "Socket.IO",
         link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
       },
+      {
+        name: "Python",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      },
     ],
   },
   {
