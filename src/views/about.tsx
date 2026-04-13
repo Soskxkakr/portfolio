@@ -115,6 +115,7 @@ export default function About() {
                           src={el.link}
                           width={36}
                           height={36}
+                          unoptimized
                           className="h-9 w-9 object-contain"
                         />
                         <span className="text-sm font-medium text-zinc-200">

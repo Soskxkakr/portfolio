@@ -23,6 +23,7 @@ export default function TechIcon({
         alt={name}
         width={size}
         height={size}
+        unoptimized
         className="rounded-md opacity-90 transition group-hover:opacity-100 group-hover:scale-110"
       />
       <span className="pointer-events-none absolute -bottom-8 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-md bg-zinc-900 px-2 py-1 text-[10px] font-medium text-zinc-200 opacity-0 shadow-lg ring-1 ring-white/10 transition group-hover:opacity-100">
