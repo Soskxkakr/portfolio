@@ -1,17 +1,16 @@
-import React, { EventHandler, useContext, useState } from "react";
-import { contactLinks } from "../constants/constants";
-import { ThemeContext } from "../contexts/themeProvider";
-import Image from "next/image";
+"use client";
 
-const Contact = () => {
+import { useState } from "react";
+import { contactLinks } from "../constants/constants";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+export default function Contact() {
   const [emailTemplate, setEmailTemplate] = useState({
     name: "",
     subject: "",
     message: "",
   });
-
-  const theme = useContext(ThemeContext);
-  const darkMode = theme.state.darkMode;
 
   const handleEmailTemplate = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -28,172 +27,168 @@ const Contact = () => {
       : "";
     window.location.href =
       "mailto:aldo.taslim@gmail.com?subject=" +
-      emailTemplate.subject +
+      encodeURIComponent(emailTemplate.subject) +
       "&body=" +
       body +
       defaultFooter;
   };
 
-  return (
-    <div
-      id="contact"
-      className={darkMode ? "bg-gray-100 pt-36" : "bg-black text-white pt-36"}
-    >
-      <div className="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 ">
-        <h2 className="text-5xl font-bold px-4 md:px-0 text-center z-0">
-          Contact
-        </h2>
-        <div>
-          <h4 className="mt-12 text-3xl font-semibold text-blue-500">
-            Connect with me
-          </h4>
-          <p
-            className={
-              "mt-4 text-xl " + (darkMode ? "text-gray-500" : "text-white")
-            }
-          >
-            If you want to know more about me or my work, or if you would just
-            <br />
-            like to say hello, send me a message. I&apos;d love to hear from
-            you.
-          </p>
-        </div>
-        <div className="flex justify-between items-center md:items-stretch  flex-col md:flex-row pb-2">
-          <div className="w-full md:pr-8">
-            <form>
-              <div className="my-6">
-                <label
-                  htmlFor="name"
-                  className={
-                    darkMode
-                      ? "block mb-2 text-lg font-medium text-gray-900"
-                      : "block mb-2 text-lg font-medium text-white"
-                  }
-                >
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  value={emailTemplate.name}
-                  onChange={(e) => handleEmailTemplate(e)}
-                  className={`border text-sm rounded-lg block w-full p-2.5 ${
-                    darkMode
-                      ? "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
-                      : "bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  }`}
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="subject"
-                  className={
-                    darkMode
-                      ? "block mb-2 text-lg font-medium text-gray-900"
-                      : "block mb-2 text-lg font-medium text-white"
-                  }
-                >
-                  Subject
-                </label>
-                <input
-                  id="subject"
-                  name="subject"
-                  value={emailTemplate.subject}
-                  onChange={(e) => handleEmailTemplate(e)}
-                  className={`border text-sm rounded-lg block w-full p-2.5 ${
-                    darkMode
-                      ? "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
-                      : "bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  }`}
-                  placeholder="Enter your subject"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="message"
-                  className={
-                    darkMode
-                      ? "block mb-2 text-lg font-medium text-gray-900"
-                      : "block mb-2 text-lg font-medium text-white"
-                  }
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={emailTemplate.message}
-                  onChange={(e) => handleEmailTemplate(e)}
-                  className={`border text-sm rounded-lg block w-full p-2.5 ${
-                    darkMode
-                      ? "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
-                      : "bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  }`}
-                  placeholder="Enter your message"
-                  required
-                />
-              </div>
-              <div className="flex justify-between ">
-                <div className="underline">
-                  <a href="mailto:aldo.taslim@gmail.com">
-                    Send me email directly
-                  </a>
-                </div>
-                <button
-                  className="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400"
-                  onClick={(e) => handleSubmitForm(e)}
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-          <div className="w-full flex flex-col md:items-end  mt-12 md:mt-6">
-            <h1 className="text-3xl font-bold">Phone</h1>
-            <a className="mb-12 mt-4 font-semibold text-blue-700 block uppercase">
-              +60 17-242 0407
-            </a>
-            <h1 className="text-3xl font-bold">Email</h1>
-            <a className="mb-12 mt-4 font-semibold text-blue-700 block uppercase">
-              aldo.taslim@gmail.com
-            </a>
-            <h1 className="text-3xl  font-bold">Address</h1>
-            <a className="mt-4  mb-12 md:text-right font-semibold text-blue-700 block uppercase">
-              Petaling Jaya, Selangor
-              <br />
-              Kuala Lumpur, Malaysia
-            </a>
-            <h1 className="text-3xl  font-bold">Social</h1>
-            <ul className="flex">
-              {contactLinks.map((el) => (
-                <a
-                  key={el.name}
-                  href={el.link}
-                  className="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"
-                >
-                  <Image alt="" src={el.url} width={50} height={50} />
-                </a>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div
-        className={
-          darkMode
-            ? "w-full bg-white text-black text-lg py-3 flex justify-center"
-            : "w-full bg-gray-900 text-white text-lg py-3 flex justify-center"
-        }
-      >
-        Made with
-        <div className="text-red-500 px-2 text-2xl">&#10084;</div>
-        by Reinaldo Taslim
-      </div>
-    </div>
-  );
-};
+  const inputClass =
+    "w-full rounded-xl border border-white/[0.08] bg-zinc-900/80 px-4 py-3 text-zinc-100 placeholder-zinc-500 shadow-inner transition focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20";
 
-export default Contact;
+  return (
+    <section id="contact" className="relative border-t border-white/[0.06]">
+      <div className="mesh-bg border-b border-white/[0.06]">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-fuchsia-400/90">
+              Hello
+            </p>
+            <h2 className="mt-3 text-4xl font-bold tracking-tight text-white md:text-5xl">
+              Contact
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
+              Want to collaborate or say hi? Drop a message — I&apos;d love to
+              hear from you.
+            </p>
+          </motion.div>
+
+          <div className="mt-16 flex flex-col gap-14 lg:flex-row lg:items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="glass-panel flex-1 p-6 md:p-8"
+            >
+              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                <div>
+                  <label htmlFor="name" className="mb-2 block text-sm font-medium text-zinc-300">
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    value={emailTemplate.name}
+                    onChange={handleEmailTemplate}
+                    className={inputClass}
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="subject" className="mb-2 block text-sm font-medium text-zinc-300">
+                    Subject
+                  </label>
+                  <input
+                    id="subject"
+                    name="subject"
+                    value={emailTemplate.subject}
+                    onChange={handleEmailTemplate}
+                    className={inputClass}
+                    placeholder="What's this about?"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-zinc-300">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={emailTemplate.message}
+                    onChange={handleEmailTemplate}
+                    rows={5}
+                    className={inputClass}
+                    placeholder="Write your message..."
+                    required
+                  />
+                </div>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <a
+                    href="mailto:aldo.taslim@gmail.com"
+                    className="text-sm text-cyan-400 underline-offset-4 hover:underline"
+                  >
+                    Or email me directly
+                  </a>
+                  <motion.button
+                    type="button"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 px-8 py-3 font-semibold text-zinc-950 shadow-glow"
+                    onClick={handleSubmitForm}
+                  >
+                    Open in email client
+                  </motion.button>
+                </div>
+              </form>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex w-full flex-col gap-8 lg:max-w-sm"
+            >
+              <div className="glass-panel p-6">
+                <h3 className="text-lg font-semibold text-white">Details</h3>
+                <dl className="mt-4 space-y-4 text-sm">
+                  <div>
+                    <dt className="text-zinc-500">Phone</dt>
+                    <dd className="mt-1 font-medium text-cyan-300/90">
+                      +60 17-242 0407
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-zinc-500">Email</dt>
+                    <dd className="mt-1 font-medium text-cyan-300/90 break-all">
+                      aldo.taslim@gmail.com
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-zinc-500">Location</dt>
+                    <dd className="mt-1 text-zinc-300">
+                      Petaling Jaya, Selangor
+                      <br />
+                      Kuala Lumpur, Malaysia
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">Social</h3>
+                <ul className="mt-4 flex flex-wrap gap-3">
+                  {contactLinks.map((el) => (
+                    <motion.a
+                      key={el.name}
+                      href={el.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.08, y: -2 }}
+                      className="rounded-xl border border-white/10 bg-white/[0.04] p-3"
+                    >
+                      <Image alt={el.name} src={el.url} width={40} height={40} />
+                    </motion.a>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      <footer className="flex items-center justify-center gap-2 bg-zinc-950 py-6 text-sm text-zinc-500">
+        <span>Made with</span>
+        <span className="text-fuchsia-500" aria-hidden>
+          ♥
+        </span>
+        <span>by Reinaldo Taslim</span>
+      </footer>
+    </section>
+  );
+}

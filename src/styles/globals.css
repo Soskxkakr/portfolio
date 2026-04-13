@@ -2,22 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-.embla {
-  max-width: 28rem;
-  margin: auto;
-  overflow: hidden;
-  --slide-height: 19rem;
-  --slide-spacing: 1rem;
-  --slide-size: 80%;
+:root {
+  --bg: #050508;
+  --surface: rgba(15, 17, 25, 0.72);
+  --border: rgba(255, 255, 255, 0.07);
+  --text: #e8eaef;
+  --muted: #8b95a8;
+  --accent: #22d3ee;
+  --accent-dim: rgba(34, 211, 238, 0.12);
 }
-.embla__container {
-  display: flex;
-  touch-action: pan-y pinch-zoom;
-  margin-left: calc(var(--slide-spacing) * -1);
+
+html {
+  scroll-behavior: smooth;
 }
-.embla__slide {
-  transform: translate3d(0, 0, 0);
-  flex: 0 0 var(--slide-size);
-  min-width: 0;
-  padding-left: var(--slide-spacing);
+
+body {
+  @apply antialiased text-[var(--text)] bg-[var(--bg)];
+}
+
+/* Hero + section backgrounds */
+.mesh-bg {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 100% 80% at 50% -40%, rgba(34, 211, 238, 0.18), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 10%, rgba(167, 139, 250, 0.14), transparent 50%),
+    radial-gradient(ellipse 50% 35% at 0% 60%, rgba(244, 114, 182, 0.08), transparent 45%);
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black 40%, transparent);
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, #22d3ee 0%, #a78bfa 45%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-panel {
+  @apply rounded-2xl border border-white/[0.08] bg-[var(--surface)] backdrop-blur-xl;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 24px 48px -24px rgba(0, 0, 0, 0.65);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.shimmer-border {
+  background: linear-gradient(
+    90deg,
+    rgba(34, 211, 238, 0.4),
+    rgba(167, 139, 250, 0.5),
+    rgba(244, 114, 182, 0.4),
+    rgba(34, 211, 238, 0.4)
+  );
+  background-size: 200% auto;
+  animation: shimmer 8s linear infinite;
 }

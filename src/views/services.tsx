@@ -1,61 +1,47 @@
-import React, { useContext } from "react";
 import { serviceData } from "../constants/constants";
-import { ThemeContext } from "../contexts/themeProvider";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const Services = () => {
-  const theme = useContext(ThemeContext);
+export default function Services() {
   return (
-    <div
-      className={
-        theme.state.darkMode ? "pb-20 bg-fixed bg-gray-100" : "pb-20 bg-black"
-      }
-      // style={{backgroundImage: `url('https://i.pinimg.com/originals/b0/b1/f5/b0b1f5d33de00e3c21ad29bbba25e31b.gif')`}}>
+    <section
+      id="services"
+      className="relative border-t border-white/[0.06] bg-zinc-950/40 py-24"
     >
-      <div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 px-4 pt-20"
-        id="services"
-      >
-        <h2
-          className={
-            theme.state.darkMode
-              ? "text-5xl font-bold px-4 md:px-0 text-center"
-              : "text-5xl font-bold px-4 md:px-0 text-center text-white"
-          }
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
         >
-          Services
-        </h2>
-        <div className="">
-          <h4 className="mt-16 text-3xl font-semibold text-blue-500">
-            What I Provide
-          </h4>
-          <div className="mt-8 flex md:flex-row justify-between flex-col md:items-stretch items-center ">
-            {serviceData.map((el) => (
-              <motion.div
-                key={el.name}
-                initial="hidden"
-                whileInView={"visible"}
-                variants={{
-                  visible: { opacity: 1, scale: 1 },
-                  hidden: { opacity: 0, scale: 0 },
-                }}
-                className={
-                  theme.state.darkMode
-                    ? "md:w-96 p-4 bg-white rounded-lg flex items-center flex-col mt-8"
-                    : "md:w-96 p-4 bg-gray-100 rounded-lg flex items-center flex-col mt-8"
-                }
-              >
-                <Image src={el.img} alt={el.name} width={50} height={50} />
-                <h4 className="text-xl font-bold mt-4">{el.name}</h4>
-                <p className="text-lg mt-2 text-justify">{el.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-violet-400/90">
+            Offerings
+          </p>
+          <h2 className="mt-3 text-4xl font-bold tracking-tight text-white md:text-5xl">
+            Services
+          </h2>
+        </motion.div>
+
+        <div className="mt-14 flex flex-col items-stretch gap-8 md:flex-row md:justify-between">
+          {serviceData.map((el) => (
+            <motion.div
+              key={el.name}
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -4 }}
+              className="glass-panel flex flex-1 flex-col items-center p-8 text-center md:max-w-sm"
+            >
+              <Image src={el.img} alt="" width={56} height={56} />
+              <h3 className="mt-6 text-xl font-bold text-white">{el.name}</h3>
+              <p className="mt-4 text-justify text-sm leading-relaxed text-zinc-400">
+                {el.desc}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Services;
+}

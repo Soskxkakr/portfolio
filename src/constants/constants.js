@@ -1,190 +1,191 @@
 export const pictureData = [
   {
     alt: "Reinaldo Taslim",
-    path: "/me.jpg",
-  },
-  {
-    alt: "Reinaldo Taslim",
     path: "/me2.jpg",
   },
 ];
 
-export const techStack = [
+export const techStackByCategory = [
   {
-    name: "Github",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    title: "Frontend",
+    items: [
+      {
+        name: "HTML",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      },
+      {
+        name: "CSS",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
+      },
+      {
+        name: "Javascript",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "TypeScript",
+        link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "React",
+        link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+      },
+      {
+        name: "Vue.js",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      },
+      {
+        name: "Angular",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+      },
+      {
+        name: "Redux",
+        link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        link: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+      },
+      {
+        name: "Bootstrap",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      },
+      {
+        name: "JQUery",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+      },
+    ],
   },
   {
-    name: "Jenkins",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+    title: "Backend",
+    items: [
+      {
+        name: "NodeJS",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      },
+      {
+        name: "Express",
+        link: "https://cdn.simpleicons.org/express/68A063",
+      },
+      {
+        name: "Socket.IO",
+        link: "https://cdn.simpleicons.org/socketdotio/25C26E",
+      },
+      {
+        name: "C#",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
+      },
+      {
+        name: "SignalR",
+        link: "https://www.cloud-config.jp/wp-content/uploads//icon-signalR.svg",
+      },
+      {
+        name: "Python",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      },
+      {
+        name: "Django",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+      },
+      {
+        name: "Flask",
+        link: "https://cdn.simpleicons.org/flask/FFFFFF",
+      },
+      {
+        name: "Laravel",
+        link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/laravel/laravel-original.svg",
+      },
+    ],
   },
   {
-    name: "AWS",
-    link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    title: "Databases",
+    items: [
+      {
+        name: "MySQL",
+        link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mysql/mysql-original.svg",
+      },
+      {
+        name: "Mongo DB",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
+      },
+      {
+        name: "MSSQL",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+      },
+      {
+        name: "Redis",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+      },
+    ],
   },
   {
-    name: "C#",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
+    title: "Cloud & DevOps",
+    items: [
+      {
+        name: "AWS",
+        link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      },
+      {
+        name: "Azure",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+      },
+      {
+        name: "Docker",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg",
+      },
+      {
+        name: "Jenkins",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+      },
+      {
+        name: "Linux",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+      },
+      {
+        name: "Bash",
+        link: "https://cdn.simpleicons.org/gnubash/4EAA25",
+      },
+    ],
   },
   {
-    name: "TypeScript",
-    link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
-  },
-  {
-    name: "Express",
-    link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
-  },
-  {
-    name: "NodeJS",
-    link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-  },
-  {
-    name: "Postman",
-    link: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
-  },
-  {
-    name: "Dart",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
-  },
-  {
-    name: "Flutter",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-plain.svg",
-  },
-  {
-    name: "React Native",
-    link: "https://pagepro.co/blog/wp-content/uploads/2020/03/react-native-logo-884x1024.png",
-  },
-  {
-    name: "HTML",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    name: "CSS",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
-  },
-  {
-    name: "Bootstrap",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
-  },
-  {
-    name: "Redux",
-    link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
-  },
-  {
-    name: "Sass",
-    link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
-  },
-  {
-    name: "Javascript",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  {
-    name: "Tailwind CSS",
-    link: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
-  },
-  {
-    name: "React",
-    link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-  },
-  {
-    name: "MySQL",
-    link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mysql/mysql-original.svg",
-  },
-  {
-    name: "Mongo DB",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
-  },
-  {
-    name: "Azure",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
-  },
-  {
-    name: "Git",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg",
-  },
-  {
-    name: "Docker",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg",
-  },
-  {
-    name: "Firebase",
-    link: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-  },
-  {
-    name: "Bash",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
-  },
-  {
-    name: "Vim",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg",
-  },
-  {
-    name: "VS Code",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-  },
-  {
-    name: "Angular",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-  },
-  {
-    name: "Python",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-  },
-  {
-    name: "Django",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-  },
-  {
-    name: "Flask",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
-  },
-  {
-    name: "Gulp",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gulp/gulp-plain.svg",
-  },
-  {
-    name: "Webpack",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
-  },
-  {
-    name: "Babel",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg",
-  },
-  {
-    name: "Laravel",
-    link: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/laravel/laravel-original.svg",
-  },
-  {
-    name: "Linux",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-  },
-  {
-    name: "Selenium",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg",
-  },
-  {
-    name: "JQUery",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-  },
-  {
-    name: "Java",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-  },
-  {
-    name: "Grunt",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grunt/grunt-original.svg",
-  },
-  {
-    name: "Swift",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg",
-  },
-  {
-    name: "SignalR",
-    link: "https://www.cloud-config.jp/wp-content/uploads//icon-signalR.svg",
-  },
-  {
-    name: "Socket.IO",
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
+    title: "Tools & workflow",
+    items: [
+      {
+        name: "Git",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg",
+      },
+      {
+        name: "Github",
+        link: "https://cdn.simpleicons.org/github/FFFFFF",
+      },
+      {
+        name: "VS Code",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+      },
+      {
+        name: "Vim",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg",
+      },
+      {
+        name: "Postman",
+        link: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+      },
+      {
+        name: "Selenium",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg",
+      },
+      {
+        name: "GA4",
+        link: "https://cdn.simpleicons.org/googleanalytics/F9AB00",
+      },
+      {
+        name: "PostHog",
+        link: "https://cdn.simpleicons.org/posthog/F54E00",
+      },
+      {
+        name: "Burp Suite",
+        link: "https://cdn.simpleicons.org/burpsuite/FF6633",
+      },
+    ],
   },
 ];
 
@@ -259,7 +260,7 @@ export const experienceData = [
     tools: [
       {
         name: "Github",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        link: "https://cdn.simpleicons.org/github/FFFFFF",
       },
       {
         name: "Jenkins",
@@ -271,7 +272,7 @@ export const experienceData = [
       },
       {
         name: "NodeJS",
-        link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       },
       {
         name: "Postman",
@@ -295,15 +296,11 @@ export const experienceData = [
       },
       {
         name: "Bootstrap",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
       },
       {
         name: "Redux",
         link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
-      },
-      {
-        name: "Sass",
-        link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
       },
       {
         name: "Javascript",
@@ -330,16 +327,12 @@ export const experienceData = [
         link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg",
       },
       {
-        name: "Grunt",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grunt/grunt-original.svg",
-      },
-      {
         name: "SignalR",
         link: "https://www.cloud-config.jp/wp-content/uploads//icon-signalR.svg",
       },
       {
         name: "Socket.IO",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
+        link: "https://cdn.simpleicons.org/socketdotio/25C26E",
       },
       {
         name: "Python",
@@ -348,7 +341,7 @@ export const experienceData = [
     ],
   },
   {
-    name: "Sunway Group | Metacloud Sdn Bhd.",
+    name: "Sunway Group | Metacloud Sdn. Bhd.",
     position: "Associate Software Engineer",
     startDate: "Apr 2022",
     endDate: "Jun 2023",
@@ -367,7 +360,7 @@ export const experienceData = [
       },
       {
         name: "Github",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        link: "https://cdn.simpleicons.org/github/FFFFFF",
       },
       {
         name: "Jenkins",
@@ -383,7 +376,7 @@ export const experienceData = [
       },
       {
         name: "Bootstrap",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
       },
       {
         name: "Angular",
@@ -407,29 +400,25 @@ export const experienceData = [
       },
       {
         name: "Bash",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+        link: "https://cdn.simpleicons.org/gnubash/4EAA25",
       },
       {
         name: "NodeJS",
-        link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       },
       {
         name: "Postman",
         link: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
       },
-      {
-        name: "Gulp",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gulp/gulp-plain.svg",
-      },
     ],
   },
   {
-    name: "Kingdom Digital Sdn Bhd.",
+    name: "Kingdom Digital Sdn. Bhd.",
     position: "Web Developer - Internship",
     startDate: "Dec 2020",
     endDate: "Mar 2021",
     description: [
-      "Compiled SASS and JS files using Webpack and Babel.",
+      "Compiled front-end assets for production builds.",
       "Developed, tested, and deployed responsive web apps written in HTML/CSS.",
       "Developed and tested responsive email template using Cerberus written in HTML/CSS.",
     ],
@@ -446,15 +435,7 @@ export const experienceData = [
       },
       {
         name: "Bootstrap",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
-      },
-      {
-        name: "Webpack",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
-      },
-      {
-        name: "Babel",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg",
+        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
       },
     ],
   },
@@ -478,7 +459,7 @@ export const experienceData = [
       },
       {
         name: "Github",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        link: "https://cdn.simpleicons.org/github/FFFFFF",
       },
       {
         name: "Postman",
@@ -502,72 +483,7 @@ export const experienceData = [
       },
       {
         name: "Bash",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
-      },
-    ],
-  },
-];
-
-export const projectsData = [
-  {
-    name: "SocialPal",
-    description:
-      "SocialPal is a Social Media Management Application that serves the purpose of managing multiple social medias under one platform. The current social medias that are integrated into this application are LinkedIn and Twitter.",
-    ghLink: "https://github.com/Soskxkakr/SocialPal",
-    image: "/socialPal.png",
-    tools: [
-      {
-        name: "Firebase",
-        link: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-      },
-      {
-        name: "Javascript",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-      },
-      {
-        name: "React Native",
-        link: "https://pagepro.co/blog/wp-content/uploads/2020/03/react-native-logo-884x1024.png",
-      },
-      {
-        name: "HTML",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      },
-      {
-        name: "CSS",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
-      },
-      {
-        name: "Bootstrap",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
-      },
-    ],
-  },
-  {
-    name: "SpaceFood",
-    description:
-      "A Food Ordering Website made in ASP.NET with an admin page that has CRUD functionalities towards products and users.",
-    ghLink: "https://github.com/Soskxkakr/SpaceFood",
-    image: "/spaceFood.jpg",
-    tools: [
-      {
-        name: "C#",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
-      },
-      {
-        name: "Firebase",
-        link: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-      },
-      {
-        name: "HTML",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      },
-      {
-        name: "CSS",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
-      },
-      {
-        name: "Bootstrap",
-        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
+        link: "https://cdn.simpleicons.org/gnubash/4EAA25",
       },
     ],
   },

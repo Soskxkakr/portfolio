@@ -1,176 +1,107 @@
-import React, { useContext, useState } from "react";
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
 import { Link } from "react-scroll";
-import { ThemeContext } from "@/contexts/themeProvider";
 import { motion, AnimatePresence } from "framer-motion";
-import Hamburger from "hamburger-react";
 
 const links = [
-  {
-    name: "Home",
-    route: "/",
-  },
-  {
-    name: "About",
-    route: "about",
-  },
-  {
-    name: "Experiences",
-    route: "experiences",
-  },
-  // {
-  //   name: "Services",
-  //   route: "services",
-  // },
-  {
-    name: "Projects",
-    route: "projects",
-  },
-  {
-    name: "Contact",
-    route: "contact",
-  },
+  { name: "Home", route: "home" },
+  { name: "About", route: "about" },
+  { name: "Experiences", route: "experiences" },
+  { name: "Contact", route: "contact" },
 ];
 
-const Navbar = () => {
-  const theme = useContext(ThemeContext);
-  const [toggle, setToggle] = useState(false);
-  const darkMode = theme.state.darkMode;
+const linkClass =
+  "relative block px-3 py-2 text-sm font-medium text-zinc-300 transition hover:text-white";
 
-  const toggleTheme = (): void => {
-    if (!theme.dispatch) return;
-    theme.dispatch({ type: darkMode ? "LIGHTMODE" : "DARKMODE" });
-  };
+const activeClass = "!text-cyan-300";
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <nav
-        className={
-          darkMode
-            ? "bg-white border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0"
-            : "bg-gray-700 border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0"
-        }
-      >
-        <div className="flex justify-between items-center py-2 md:py-4 md:px-2 pl-2 mx-auto">
-          <div className="flex items-center cursor-pointer">
-            <Link
-              to="/"
-              className={
-                darkMode
-                  ? "text-xl font-medium text-decoration-none whitespace-nowrap text-black"
-                  : "text-xl font-medium text-decoration-none whitespace-nowrap text-white"
-              }
-            >
-              {`<Reinaldo Taslim />`}
-            </Link>
-          </div>
-          <div className="hidden justify-between items-center w-full md:flex md:w-auto ">
-            <ul
-              className={
-                "flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium"
-              }
-            >
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-zinc-950/75 backdrop-blur-xl">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
+          <Link
+            to="home"
+            spy
+            smooth
+            duration={500}
+            offset={-72}
+            className="cursor-pointer font-mono text-sm font-semibold tracking-tight text-white md:text-base"
+            onClick={() => setOpen(false)}
+          >
+            <span className="gradient-text">{`<Reinaldo Taslim />`}</span>
+          </Link>
+
+          <ul className="hidden items-center gap-1 md:flex">
+            {links.map((el) => (
+              <li key={el.name}>
+                <Link
+                  to={el.route}
+                  spy
+                  smooth
+                  duration={500}
+                  offset={-72}
+                  activeClass={activeClass}
+                  className={`${linkClass} group`}
+                >
+                  {el.name}
+                  <span className="absolute bottom-1 left-3 right-3 h-px origin-left scale-x-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400 to-violet-400/0 transition group-hover:scale-x-100" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-label={open ? "Close menu" : "Open menu"}
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.03] md:hidden"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <motion.span
+              animate={open ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+              className="h-0.5 w-5 rounded-full bg-zinc-100"
+            />
+            <motion.span
+              animate={open ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+              className="h-0.5 w-5 rounded-full bg-zinc-100"
+            />
+            <motion.span
+              animate={open ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+              className="h-0.5 w-5 rounded-full bg-zinc-100"
+            />
+          </button>
+        </nav>
+      </header>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-x-0 top-[57px] z-40 border-b border-white/[0.06] bg-zinc-950/95 px-4 py-4 backdrop-blur-xl md:hidden"
+          >
+            <ul className="flex flex-col gap-1">
               {links.map((el) => (
-                <li className="cursor-pointer" key={el.name}>
+                <li key={el.name}>
                   <Link
                     to={el.route}
-                    activeClass={"text-white bg-blue-500"}
-                    spy={true}
-                    smooth={true}
-                    className={
-                      darkMode
-                        ? "block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md"
-                        : "block py-2 px-3 text-white hover:bg-blue-500 hover:text-black rounded-md"
-                    }
+                    spy
+                    smooth
+                    duration={500}
+                    offset={-72}
+                    activeClass={activeClass}
+                    className="block rounded-lg px-3 py-3 text-base font-medium text-zinc-200 hover:bg-white/[0.06]"
+                    onClick={() => setOpen(false)}
                   >
                     {el.name}
                   </Link>
                 </li>
-              ))}
-            </ul>
-            <div onClick={() => toggleTheme()}>
-              {darkMode ? (
-                <Image
-                  src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-sun-lighting-flaticons-flat-flat-icons.png"
-                  width={50}
-                  height={50}
-                  className="w-6 ml-6 cursor-pointer hover:scale-1.50 block"
-                  alt=""
-                />
-              ) : (
-                <Image
-                  src="https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-moon-astrology-and-symbology-prettycons-lineal-color-prettycons.png"
-                  width={50}
-                  height={50}
-                  className="w-6 ml-6 cursor-pointer hover:scale-1.50 block"
-                  alt=""
-                />
-              )}
-            </div>
-          </div>
-
-          <div className="flex md:hidden items-center">
-            <div onClick={() => toggleTheme()}>
-              {darkMode ? (
-                <Image
-                  src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-sun-lighting-flaticons-flat-flat-icons.png"
-                  width={50}
-                  height={50}
-                  className="w-6 mr-4 cursor-pointer hover:scale-1.50 block"
-                  alt=""
-                />
-              ) : (
-                <Image
-                  src="https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-moon-astrology-and-symbology-prettycons-lineal-color-prettycons.png"
-                  width={50}
-                  height={50}
-                  alt=""
-                  className="w-6 mr-4 cursor-pointer hover:scale-1.50 block"
-                />
-              )}
-            </div>
-
-            <Hamburger
-              toggled={toggle}
-              size={22}
-              duration={0.8}
-              distance={"lg"}
-              toggle={setToggle}
-              color={darkMode ? "#000000" : "#ffffff"}
-            />
-          </div>
-        </div>
-        {/* Mobile view nav bar */}
-      </nav>
-      <AnimatePresence>
-        {toggle && (
-          <motion.div
-            initial={{ x: 100 }}
-            animate={{ x: 0, transition: { type: "spring" } }}
-            exit={{ x: 200, transition: { type: "spring" } }}
-            className={
-              darkMode
-                ? "bg-white py-2 px-2 md:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
-                : "bg-black py-2 px-2 md:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
-            }
-          >
-            <ul className="md:hidden md:flex-row md:space-y-8 md:mt-0 md:text-md md:font-medium">
-              {links.map((el) => (
-                <Link
-                  key={el.name}
-                  to={el.route}
-                  activeClass={"text-white bg-blue-500"}
-                  className={
-                    darkMode
-                      ? "hover:bg-blue-500 text-black block px-3 py-2 rounded-md text-base font-medium mt-1 hover:text-white"
-                      : "hover:bg-blue-500 text-white block px-3 py-2 rounded-md text-base font-medium mt-1 hover:text-white"
-                  }
-                  spy={true}
-                  smooth={true}
-                  onClick={() => setToggle(false)}
-                >
-                  <li>{el.name}</li>
-                </Link>
               ))}
             </ul>
           </motion.div>
@@ -178,6 +109,4 @@ const Navbar = () => {
       </AnimatePresence>
     </>
   );
-};
-
-export default Navbar;
+}
