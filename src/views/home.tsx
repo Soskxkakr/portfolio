@@ -44,8 +44,7 @@ export default function Main() {
             variants={item}
             className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
           >
-            Hi, I&apos;m{" "}
-            <span className="gradient-text">Reinaldo Taslim</span>
+            Hi, I&apos;m <span className="gradient-text">Reinaldo Taslim</span>
           </motion.h1>
           <motion.div variants={item} className="mt-4 text-xl sm:text-2xl">
             <span className="font-semibold text-zinc-300">I build </span>
@@ -88,7 +87,10 @@ export default function Main() {
               </motion.a>
             ))}
           </motion.div>
-          <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
+          <motion.div
+            variants={item}
+            className="mt-10 flex flex-wrap justify-center gap-4 md:justify-start"
+          >
             <motion.a
               href="/ReinaldoTaslim-Resume.pdf"
               target="_blank"
@@ -113,7 +115,12 @@ export default function Main() {
         <motion.div
           initial={{ opacity: 0, scale: 0.92, y: 40 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 80, damping: 16, delay: 0.2 }}
+          transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 16,
+            delay: 0.2,
+          }}
           className="relative hidden w-full max-w-lg sm:block"
         >
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-cyan-500/20 via-violet-500/10 to-fuchsia-500/20 blur-3xl" />
