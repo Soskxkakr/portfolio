@@ -20,6 +20,21 @@ body {
   @apply antialiased text-[var(--text)] bg-[var(--bg)];
 }
 
+/* Custom liquid cursor — fine pointer + motion ok only (see LiquidCursor) */
+@media (pointer: fine) {
+  html.liquid-cursor-active,
+  html.liquid-cursor-active * {
+    cursor: none !important;
+  }
+
+  html.liquid-cursor-active input,
+  html.liquid-cursor-active textarea,
+  html.liquid-cursor-active select,
+  html.liquid-cursor-active [contenteditable="true"] {
+    cursor: text !important;
+  }
+}
+
 /* Hero + section backgrounds */
 .mesh-bg {
   background-color: var(--bg);
