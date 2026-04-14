@@ -339,7 +339,7 @@ export const experienceData = [
     ],
   },
   {
-    name: "Sunway Group | Metacloud Sdn. Bhd.",
+    name: "Sunway Sdn. Bhd. | Sunway Technology Group",
     position: "Associate Software Engineer",
     startDate: "Apr 2022",
     endDate: "Jun 2023",
